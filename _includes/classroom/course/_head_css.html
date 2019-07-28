@@ -1,0 +1,95 @@
+<style media="screen">
+    li {
+      margin-bottom: 1rem;
+      /* line-height: 2; */
+      /* font-size: 1.4rem; */
+    }
+    li .iconic {
+      margin-right: 1rem;
+    }
+    .tabbed-nav {
+      background: white;
+    }
+    .tabbed-nav .active {
+      background: #2C327C;
+      color: white;
+    }
+    .in-middle {
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      left: 15px;
+      right: 15px;
+      margin-top: 0;
+      margin-bottom: 0;
+      border: 0;
+      border-top: 1px solid rgba(44,50,124,.3);
+    }
+    span.free-prompt {
+      color: #009432;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      background: #F8F9FA;
+    }
+    .course-content-card {
+      padding: 3rem;
+      transition: box-shadow 0.5s;
+      background: white;
+    }
+    .course-content-card.locked {
+      padding: 3rem;
+      background: #eee;
+      transition: background 0.5s;
+    }
+    .course-content-card.locked .premium-layer {
+      /*transition: 0.5s ease;*/
+      opacity: 0;
+      position: absolute;
+      z-index: 1000;
+      background: white;
+      left: 15px;
+      right: 15px;
+      top: calc(5rem - 20px);
+      bottom: calc(5rem - 50px);
+      text-align: center;
+    }
+    .course-content-card:focus,
+    .course-content-card:hover {
+      /*transform: scale3d(1, 1, 1);*/
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .15);
+    }
+    .course-content-card.locked:focus,
+    .course-content-card.locked:hover {
+      /*transform: scale3d(1, 1, 1);*/
+      /*background: white;*/
+      opacity: 1;
+    }
+    .course-content-card.locked:focus .premium-layer,
+    .course-content-card.locked:hover .premium-layer {
+      /*transform: scale3d(1, 1, 1);*/
+      background: white;
+      opacity: 0.9;
+      /*background: white;*/
+    }
+    .course-content-card.locked:focus .premium-layer .layer-cta,
+    .course-content-card.locked:hover .premium-layer .layer-cta {
+      position: absolute;
+      top: 49%;
+      left: 49%;
+      transform: translate(-50%, -50%);
+    }
+    .course-content-card .title {
+      font-size: 1.6rem;
+      /*margin-top: 0.5rem;*/
+    }
+    .course-content-card p.subtext {
+      font-size: 1.4rem;
+      margin-bottom: 3.5rem;
+      color: #575757;
+      font-weight: 400;
+    }
+    .course-content-card .punch-footer {
+      position: absolute;
+      bottom: 3rem;
+    }
+  </style>

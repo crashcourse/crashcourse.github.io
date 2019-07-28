@@ -1,0 +1,70 @@
+<header class="navbar {% if page.header_color_class %} {{ page.header_color_class}} {% endif %}">
+  <div class="container-fluid">
+    <nav class="nav full-width justify-content-between align-items-center">
+      <div id="nav-primary-grp">
+        <a class="navbar-brand" href="/" aria-label="Crash Course">
+          <img id="logo" src="/static/core/img/crashcourse.svg" alt="Crash Course logo"/>
+        </a>
+
+        <ul class="nav-menu d-none d-lg-inline-block">
+          <li>
+            <a href="/courses/c-programming-101" class="nav-link-ltr">C Programming 101</a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="nav-menu nav-ctas">
+        <li role="nav-burger" class="d-md-none">
+          <a href="#menu" id="mobile-menu-open-link" class="cc-btn inverse">Menu</a>
+        </li>
+      </ul>
+
+      <div class="mobile-menu full-width d-none" id="mobile-menu">
+        <div class="container-fluid">
+          <button class="mobile-menu-close" id="mobile-menu-close-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 28 28">
+              <defs>
+                <clippath id="a">
+                  <polygon points="20 9 15 14 20 19 20 20 19 20 14 15 9 20 8 20 8 19 13 14 8 9 8 8 9 8 14 13 19 8 20 8 20 9" style="fill:none"></polygon>
+                </clippath>
+                <clippath id="b">
+                  <rect x="3" y="3" width="22" height="22" style="fill:none"></rect>
+                </clippath>
+                <clippath id="c">
+                  <rect x="8" y="8" width="12" height="12" style="fill:none"></rect>
+                </clippath>
+                <clippath id="d">
+                  <rect x="5" y="5" width="18" height="18" style="fill:none"></rect>
+                </clippath>
+              </defs>
+              <title>icon-close</title>
+              <g style="clip-path:url(#a)">
+                <g style="isolation:isolate">
+                  <g style="clip-path:url(#b)">
+                    <g style="clip-path:url(#c)">
+                      <rect x="3" y="3" width="22" height="22" style="fill:#0d122b"></rect>
+                    </g>
+                    <g style="clip-path:url(#d)">
+                      <g style="clip-path:url(#c)">
+                        <rect width="28" height="28" style="fill:#233659"></rect>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </button>
+          <nav class="nav">
+            <div class="mobile-nav-ctas full-width">
+              <h2>Menu</h2>
+              <a href="/courses" class="normal-link">Courses</a>
+              <a href="/faq/" class="normal-link">FAQ</a>
+              <hr class="mb-4">
+              <a href="/guides/writing-a-great-resume/" class="normal-link">Resume writing guide</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

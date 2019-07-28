@@ -1,0 +1,33 @@
+{% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+{% else %}
+  <meta name="description" content="Learn in-demand technology skills, build a strong resume and prepare for your dream job, all at once by working on projects curated by experts.">
+{% endif %}
+
+<meta name="image" content="https://crashcourse.io/static/core/img/cc-social.png">
+
+{% if page.noindex and page.noindex == true %}
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
+{% endif %}
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="image_src" type="image/png" href="https://crashcourse.io/static/core/img/cc-social.png"/>
+<link rel="canonical" href="https://crashcourse.io{{ page.url }}">
+
+<link rel="apple-touch-icon-precomposed" href="https://crashcourse.io/static/core/img/apple-touch-icon/180x180.png"/>
+<link rel="icon" href="https://crashcourse.io/static/core/img/apple-touch-icon/180x180.png"/>
+
+{% if page.title %}
+  <meta itemprop="name" content="{{ page.title }}">
+{% else %}
+  <meta itemprop="name" content="#LearnByDoing | Crash Course">
+{% endif %}
+
+{% if page.description %}
+  <meta itemprop="description" content="{{ page.description }}">
+{% else %}
+  <meta itemprop="description" content="Learn in-demand technology skills, build a strong resume and prepare for your dream job, all at once by working on projects curated by experts.">
+{% endif %}
+
+<meta itemprop="image" content="https://crashcourse.io/static/core/img/cc-social.png">

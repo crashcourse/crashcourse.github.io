@@ -1,0 +1,14 @@
+<script type="text/javascript">
+  var contentCards = $('.course-content-card');
+  var maxHeight = 0;
+  var currentHeight = 0;
+  for (var i = 0; i < contentCards.length; i++) {
+    currentHeight = contentCards[i].offsetHeight;
+    if (maxHeight < currentHeight) {
+      maxHeight = currentHeight;
+    }
+  }
+  for (var i = 0; i < contentCards.length; i++) {
+    contentCards[i].style.height = maxHeight + "px";
+  }
+</script>

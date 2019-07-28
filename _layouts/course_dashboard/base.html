@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+      {% if page.title %}{{ page.title }}{% else %}#LearnByDoing{% endif %} | Crash Course
+    </title>
+
+    {% include core/_general_seo_tags.html %}
+    {% include core/_facebook_seo_tags.html %}
+    {% include core/_twitter_seo_tags.html %}
+
+    {% include core/_head_css_tags.html %}
+    {% include core/_head_scripts.html %}
+
+    {% include classroom/course/_head_css.html %}
+
+    {% if page.head_css_tags %}
+      {{ page.head_css_tags }}
+    {% endif %}
+
+    {% if page.head_js_tags %}
+      {{ page.head_js_tags }}
+    {% endif %}
+
+  </head>
+
+  <body>
+    {% include core/_ie9_warning.html %}
+    {% include core/_header.html %}
+
+    <main>
+      <section style="padding-top: 2rem; padding-bottom: 2rem;">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-lg-4 d-none d-xl-block">
+                  <img src="{{ page.thumbnail_path}}" class="img-fluid" alt="{{ page.name }}">
+                </div>
+                <div class="col-lg-8 order-2">
+                  <h2>{{ page.name }}</h2>
+                  <p>{{ page.subtext }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style="padding-top: 5rem; padding-bottom: 5rem;">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-2 d-none d-md-block"><hr class="in-middle"></div>
+            <div class="col-md-8">
+              <div class="row no-gutters">
+                <div class="col-md-4 text-center ">
+                  <div class="cc-card-shadow tabbed-nav">
+                    <a href="{{ page.course_permalink }}projects/">
+                      <span class="small-title d-block pt-3 pb-3 {% if page.selected_tab == "projects" %}active{% endif %}">Projects</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-md-4 text-center order-2">
+                  <div class="cc-card-shadow tabbed-nav">
+                    <a href="{{ page.course_permalink }}interview-prep/">
+                      <span class="small-title d-block pt-3 pb-3 {% if page.selected_tab == "interview_prep" %}active{% endif %}">Interview Prep</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-md-4 text-center order-2">
+                  <div class="cc-card-shadow tabbed-nav">
+                    <a href="{{ page.course_permalink }}chapters/">
+                      <span class="small-title d-block pt-3 pb-3 {% if page.selected_tab == "chapters" %}active{% endif %}">Chapters</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 d-none d-md-block"><hr class="in-middle"></div>
+          </div>
+        </div>
+      </section>
+
+      {{ page.content }}
+    </main>
+
+    {% include core/_mobile_menu_scripts.html %}
+    {% include core/_footer.html %}
+    {% include core/_footer_scripts.html %}
+
+    {% if page.footer_scripts %}
+      {{ page.footer_scripts }}
+    {% endif %}
+
+    {% include classroom/course/_footer_scripts.html %}
+
+    {% include core/_analytics.html %}
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<script type="text/javascript">
+  // Handle mobile menu
+  var mobile_menu = document.getElementById('mobile-menu');
+  var mobile_menu_open_btn = document.getElementById('mobile-menu-open-link');
+  var mobile_menu_close_btn = document.getElementById('mobile-menu-close-btn');
+  function openMobileMenu() {
+    mobile_menu.classList.remove('d-none');
+  }
+  function closeMobileMenu() {
+    mobile_menu.classList.add('d-none');
+  }
+  mobile_menu_open_btn.addEventListener('click', function (event) {
+    event.preventDefault();
+    openMobileMenu();
+  });
+  mobile_menu_close_btn.addEventListener('click', closeMobileMenu);
+</script>
